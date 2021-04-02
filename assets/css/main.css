@@ -123,7 +123,7 @@
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #e89980;
+		color: #BF5700;
 		text-decoration: none;
 	}
 
@@ -2109,8 +2109,8 @@
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #e89980;
-			box-shadow: 0 0 0 2px #e89980;
+			border-color: #BF5700;
+			box-shadow: 0 0 0 2px #BF5700;
 		}
 
 	select {
@@ -2215,8 +2215,8 @@
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #e89980;
-			box-shadow: 0 0 0 1px #e89980;
+			border-color: #BF5700;
+			box-shadow: 0 0 0 1px #BF5700;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2765,14 +2765,14 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			background-color: #737373;
+			background-color: #BF5700;
 		}
 
 		input[type="submit"]:active,
 		input[type="reset"]:active,
 		input[type="button"]:active,
 		.button:active {
-			background-color: #595959;
+			background-color: #BF5700;
 		}
 
 		input[type="submit"].icon,
@@ -2827,7 +2827,8 @@
 			input[type="reset"].alt:hover,
 			input[type="button"].alt:hover,
 			.button.alt:hover {
-				background-color: #f8f8f8;
+				background-color: #BF5700;
+				color: white;
 			}
 
 			input[type="submit"].alt:active,
@@ -2848,7 +2849,7 @@
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #e89980;
+			background-color: #BF5700;
 			color: #ffffff !important;
 		}
 
@@ -2856,7 +2857,7 @@
 			input[type="reset"].primary:hover,
 			input[type="button"].primary:hover,
 			.button.primary:hover {
-				background-color: #ecaa96;
+				background-color: #BF5700;
 			}
 
 			input[type="submit"].primary:active,
@@ -3030,7 +3031,7 @@
 			#header input[type="reset"]:hover,
 			#header input[type="button"]:hover,
 			#header .button:hover {
-				background-color: rgba(153, 153, 153, 0.25);
+				background-color: #BF5700;
 			}
 
 			#header input[type="submit"]:active,
@@ -3129,7 +3130,7 @@
 			}
 
 			.dropotron li.active > a, .dropotron li.active > span, .dropotron li:hover > a, .dropotron li:hover > span {
-				background: #e89980;
+				background: #BF5700;
 				color: #ffffff;
 			}
 
@@ -3270,11 +3271,12 @@
 		}
 
 			#footer .icons a:hover {
+				color: #BF5700;
 				opacity: 0.75;
 			}
 
 		#footer .copyright {
-			color: #999;
+			color: #BF5700;
 			font-size: 0.9em;
 			line-height: 1em;
 			margin: 2em 0 0 0;
@@ -3303,7 +3305,7 @@
 /* CTA */
 
 	#cta {
-		background: #e89980;
+		background: #BF5700;
 		color: #f9e6df;
 		padding: 3.5em 0 4em 0;
 		text-align: center;
@@ -3325,7 +3327,7 @@
 		#cta .button {
 			box-shadow: none;
 			background: #fff;
-			color: #e89980;
+			color: #BF5700;
 		}
 
 		#cta input[type="text"],
