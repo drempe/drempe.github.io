@@ -142,6 +142,7 @@
 	p {
 		margin: 0 0 2em 0;
 	}
+		p
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #333f48;
@@ -235,6 +236,11 @@
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
+	}
+
+	.biblio {
+		padding-left:20px; 
+		text-indent: -20px; 
 	}
 
 	.align-left {
