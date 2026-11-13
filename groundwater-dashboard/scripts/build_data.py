@@ -1,4 +1,4 @@
-"""Reproduce the dashboard export without changing the research source files.
+"""Reproduce the laboratory WORKING export; this is not the thesis publication dataset.
 
 Uses the normalized SQLite concentrations and explicitly curated workbook
 reference joins. Run from this file's location with bundled Python/openpyxl.
@@ -277,7 +277,7 @@ def export():
         qa='USE, REVIEW and EXCLUDE_PENDING_REVIEW are provisional inherited blank-screen dispositions, not validated water-safety classifications. No validated run-specific LLOQ; negative reported values are retained.',
         exclusions=dict(excluded),run05Recovered=recovery.exists(),notes=['No anion, pH, electrical conductivity, alkalinity, microbial or organic contaminant datasets were provided in the normalized database.','Coordinates and groundwater divide are approximate where digitized from the thesis; unmapped sites retain chemistry without invented coordinates.'])
     data=dict(meta=meta,resultFields=FIELDS,analytes=sorted(analytes.values(),key=lambda a:a['label']),sites=sorted(site_table.values(),key=lambda s:s['label']),samples=samples,results=results)
-    out=PROJECT/'data/chemistry.json';out.write_text(json.dumps(data,separators=(',',':'),ensure_ascii=False,allow_nan=False))
+    out=PROJECT/'data/chemistry-laboratory-working.json';out.write_text(json.dumps(data,separators=(',',':'),ensure_ascii=False,allow_nan=False))
     status=collections.Counter(r[3] for r in results)
     dates=sorted(s['date'] for s in samples if s.get('date'))
     audit=['# Chemistry export audit','',f'Export date: 2026-11-13. Source database SHA256: `{meta["sourceDatabaseSha256"]}`.','',
@@ -292,7 +292,7 @@ def export():
        'Numeric state water identifiers do not establish that a site is a well. Unclassified regional and unresolved coded sites are labeled accordingly. Apparent numeric-label typos such as 5741314 and 8748505 are preserved as written and must not be geolocated by guessing a correction.',
        '', '## Counts','',f'QA states: {dict(status)}',f'Excluded source sample records: {dict(excluded)}',f'Export JSON size: {out.stat().st_size:,} bytes.',
        '', '## Unresolved date and identity joins','']+['- '+x for x in sorted(set(issues))]
-    (PROJECT/'data-audit.md').write_text('\n'.join(audit)+'\n')
+    (PROJECT/'laboratory-data-audit.local.md').write_text('\n'.join(audit)+'\n')
     print(json.dumps({'counts':counts,'qa':dict(status),'excluded':dict(excluded),'sizeBytes':out.stat().st_size,'issues':len(set(issues))},indent=2))
 
 if __name__=='__main__':export()

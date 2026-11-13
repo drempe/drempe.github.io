@@ -7,7 +7,7 @@ import re
 import sqlite3
 
 PROJECT = Path(__file__).resolve().parents[1]
-data = json.loads((PROJECT / 'data/chemistry.json').read_text())
+data = json.loads((PROJECT / 'data/chemistry-laboratory-working.json').read_text())
 samples = {s['id']: s for s in data['samples']}
 analytes = {a['id']: a for a in data['analytes']}
 sites = {s['id']: s for s in data['sites']}

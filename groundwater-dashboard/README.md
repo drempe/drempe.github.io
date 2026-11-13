@@ -1,27 +1,25 @@
-# Hill Country water chemistry dashboard
+# Vivian Yale thesis water chemistry atlas
 
-A static research dashboard for exploring available environmental chemistry records around the Hill Country Field Station in Hays County, Texas.
+Live page: https://drempe.github.io/groundwater-dashboard/.
 
-Open the hosted dashboard at https://drempe.github.io/groundwater-dashboard/.
+## Publication basis
 
-## Use the dashboard
+The dashboard is limited to results reported in the thesis and traceable to the final numerical table used for its figures. The separate laboratory working database's automated `USE`, `REVIEW` and `EXCLUDE_PENDING_REVIEW` labels do not establish thesis approval.
 
-Choose an analytical channel and a statistic to color sampling locations. Click a location or choose it from the site explorer to inspect the dates, measurements, descriptive statistics, and time series available there. Filters control the records used in summaries. The map includes geology and an approximate groundwater divide with source notes.
+The supplied Word draft contains figure images and methodological descriptions, but no embedded sample-level result table. The final numerical reporting table has not yet been identified. Until it is supplied, the public dataset contains **zero concentrations** and downloads are disabled. The map retains 25 geographic site labels, published geology, and the approximate groundwater divide. Those markers do not imply that final chemistry values are loaded.
 
-Concentrations are reported in micrograms per liter, following the source database's aqueous ppb convention. Analytical channels remain separate. Laboratory controls and non-water materials are excluded from environmental site summaries. A missing measurement is never interpreted as zero. Collection dates and analysis dates are distinguished where the sources allow.
+## Intended data interface
 
-The existing database contains provisional QA/QC dispositions. Those labels address particular laboratory screens and do not establish overall analytical validity or drinking-water suitability. The dashboard explains relevant limitations alongside the data. See `data-audit.md` and `geography-notes.md` for extraction decisions and geographic provenance.
+One element appears once in the selector. Instrument isotope, gas mode and dilution choices belong in measurement provenance. Final concentrations must preserve the thesis's selected analyses, blank corrections, exclusions and qualified values. A result cannot become eligible merely because a working database gives it a `USE` flag.
 
-## Source and maintenance
+The thesis describes cation blank corrections where the blank contributes 5–20% of a concentration and non-reporting above 20%, as well as selecting reanalysis dilution separately for affected ions. These descriptions do not substitute for the final reported numerical values.
 
-Original thesis and analytical workbooks remain in their existing locations and are read only. The public site contains selected dashboard assets and derived data; it does not include the full thesis draft, original workbooks, or working extraction files.
+`data/chemistry.json` is the publication dataset. It carries `publicationBasis: thesis-reported-results-only`, a publication status, and only `THESIS_REPORTED` result rows. The browser rejects other publication bases and filters out other result dispositions. The current status is `awaiting-final-thesis-data`.
 
-Run `scripts/recover_run05.py` first, then `scripts/build_data.py` to export chemistry. `scripts/recover_run05.py` repairs a sample-label parsing problem in the January 2025 run using the original workbook and its sample reference sheet. Geographic preparation is documented separately. Rebuilds require the original local source files at the paths expected by those scripts.
+## Working files
 
-The dashboard uses locally bundled Leaflet 1.9.4 under its BSD 2-Clause license. Background tiles require an internet connection and retain their provider attribution. This site has no server-side account system.
+Original thesis and laboratory files remain in their original locations and are read only. Earlier laboratory extraction work is retained locally as a separate working copy, excluded from the public dataset. `scripts/build_data.py` now writes only `data/chemistry-laboratory-working.json`; it cannot overwrite the publication dataset. Its flags are not final thesis QA/QC decisions.
 
-## Local preview
+`data-audit.md` describes the publication gate. `geography-notes.md` documents the map sources and positional tolerances. `scripts/validate_publication.py` checks the published dataset's eligibility and empty-state rules.
 
-Serve this folder with a static HTTP server and open its local address. Opening `index.html` directly may prevent the browser from loading the JSON data files.
-
-Publishing adds only the `groundwater-dashboard/` subdirectory to the existing GitHub Pages repository. Files elsewhere in that repository are preserved.
+The map uses Leaflet 1.9.4 under its BSD 2-Clause license. Background maps require an internet connection and retain provider attribution. The geology polygons are stored locally. Publication changes only the `groundwater-dashboard/` directory of the GitHub Pages repository.

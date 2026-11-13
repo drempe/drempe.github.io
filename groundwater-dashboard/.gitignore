@@ -6,3 +6,6 @@ data/thesis-extracted.txt
 data/hunt-2023-phase2.pdf
 data/run05-recovery.json
 .DS_Store
+
+data/chemistry-laboratory-working.json
+laboratory-data-audit.local.md
