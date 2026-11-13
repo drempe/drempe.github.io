@@ -1,0 +1,8 @@
+scratch/
+__pycache__/
+data/image*.png
+data/contact-sheet.jpg
+data/thesis-extracted.txt
+data/hunt-2023-phase2.pdf
+data/run05-recovery.json
+.DS_Store

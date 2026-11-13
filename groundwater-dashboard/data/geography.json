@@ -1,0 +1,663 @@
+{
+  "meta": {
+    "title": "Hill Country Field Station and surrounding Middle Trinity",
+    "crs": "EPSG:4326",
+    "mappedSites": 25,
+    "coordinateNote": "Local markers are digitized approximations; published well coordinates have unspecified positional accuracy. Unmapped chemical site labels remain available in the data table.",
+    "divideNote": "Approximate, manually traced groundwater divide; not a surveyed boundary or current groundwater surface.",
+    "georeference": {
+      "sourceFigure": "Thesis Figure 2B, embedded image2.png native 955 x 1053 pixels",
+      "controls": [
+        {
+          "label": "Farm Well 5747607",
+          "x": 495,
+          "y": 691,
+          "lat": 30.331362,
+          "lon": -98.138787,
+          "fitResidualMeters": 3.4
+        },
+        {
+          "label": "Johanson Monitor Well 1 5747313",
+          "x": 580,
+          "y": 616,
+          "lat": 30.337408,
+          "lon": -98.132265,
+          "fitResidualMeters": 3.7
+        },
+        {
+          "label": "Johanson 2 5747314",
+          "x": 577,
+          "y": 650,
+          "lat": 30.334475,
+          "lon": -98.132572,
+          "fitResidualMeters": 21.8
+        },
+        {
+          "label": "Buddy RV 5747316",
+          "x": 594,
+          "y": 656,
+          "lat": 30.334283,
+          "lon": -98.130992,
+          "fitResidualMeters": 19.5
+        },
+        {
+          "label": "Hegemier 5747602",
+          "x": 643,
+          "y": 996,
+          "lat": 30.306662,
+          "lon": -98.127214,
+          "fitResidualMeters": 0.9
+        }
+      ],
+      "coefficientsLonLat": [
+        [
+          7.76720312481155e-05,
+          -1.1836084083259281e-07
+        ],
+        [
+          3.4978110344029734e-07,
+          -8.083487968046251e-05
+        ],
+        [
+          -98.17749737165876,
+          30.38725300504817
+        ]
+      ],
+      "maxControlResidualMeters": 21.8,
+      "displayUncertaintyMeters": 150
+    },
+    "unmappedNotes": [
+      "RCN W2 and NWW are not explicitly located in the thesis Figure 2B; no inferred alias was used.",
+      "Pedernales subsite names Hamilton/LT/unspecified could not be matched unambiguously to individual square symbols.",
+      "5747318 is Edge Spring in Hunt Table 2 while the chemistry export classifies a numeric label as a well; it remains unmapped pending identity review.",
+      "Other regional laboratory labels lack defensible coordinates in the available source set."
+    ]
+  },
+  "sites": [
+    {
+      "id": "ec-cp",
+      "label": "Elder Creek convergence pool",
+      "lat": 30.332875,
+      "lon": -98.140057,
+      "type": "Surface water",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "CS & CP share a marker in Figure 2B; sublocations not separated.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        479,
+        672
+      ]
+    },
+    {
+      "id": "ec-cs",
+      "label": "Elder Creek convergence stream",
+      "lat": 30.332875,
+      "lon": -98.140057,
+      "type": "Surface water",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "CS & CP share a marker in Figure 2B; sublocations not separated.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        479,
+        672
+      ]
+    },
+    {
+      "id": "ec-head",
+      "label": "Elder Creek head",
+      "lat": 30.3315,
+      "lon": -98.139042,
+      "type": "Spring / surface water",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "S1 & Head are closely spaced in Figure 2B; individual assignment is approximate.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        492,
+        689
+      ]
+    },
+    {
+      "id": "ec-s1",
+      "label": "Elder Creek Spring 1",
+      "lat": 30.331824,
+      "lon": -98.139665,
+      "type": "Spring",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "S1 & Head are closely spaced in Figure 2B; individual assignment is approximate.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        484,
+        685
+      ]
+    },
+    {
+      "id": "ec-s2",
+      "label": "Elder Creek Spring 2",
+      "lat": 30.331016,
+      "lon": -98.140205,
+      "type": "Spring",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "Named marker in thesis Figure 2B.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        477,
+        695
+      ]
+    },
+    {
+      "id": "ps",
+      "label": "Pig Spring",
+      "lat": 30.333039,
+      "lon": -98.141301,
+      "type": "Spring",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "Named marker in thesis Figure 2B.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        463,
+        670
+      ]
+    },
+    {
+      "id": "rcn-cs1",
+      "label": "Roy Creek North Comma Spring 1",
+      "lat": 30.329894,
+      "lon": -98.146569,
+      "type": "Spring",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "Named marker in thesis Figure 2B.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        395,
+        709
+      ]
+    },
+    {
+      "id": "rcn-cs2",
+      "label": "Roy Creek North Comma Spring 2",
+      "lat": 30.329005,
+      "lon": -98.14672,
+      "type": "Spring",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "Named marker in thesis Figure 2B.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        393,
+        720
+      ]
+    },
+    {
+      "id": "rcn-w3",
+      "label": "Roy Creek North Waterfall 3",
+      "lat": 30.324641,
+      "lon": -98.146935,
+      "type": "Surface water",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "Named marker in thesis Figure 2B.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        390,
+        774
+      ]
+    },
+    {
+      "id": "rcn-w1",
+      "label": "Roy Creek North Waterfall 1",
+      "lat": 30.321892,
+      "lon": -98.147,
+      "type": "Surface water",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "Named marker in thesis Figure 2B.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        389,
+        808
+      ]
+    },
+    {
+      "id": "rcn-bath",
+      "label": "Roy Creek North Bath",
+      "lat": 30.320033,
+      "lon": -98.146682,
+      "type": "Surface water",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "Named marker in thesis Figure 2B.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        393,
+        831
+      ]
+    },
+    {
+      "id": "rcs-resurgence",
+      "label": "Roy Creek South Resurgence 1",
+      "lat": 30.315433,
+      "lon": -98.151555,
+      "type": "Spring / surface water",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "Named marker in thesis Figure 2B.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        330,
+        888
+      ]
+    },
+    {
+      "id": "rcs-road",
+      "label": "Roy Creek South Road",
+      "lat": 30.31535,
+      "lon": -98.150467,
+      "type": "Surface water",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "Named marker in thesis Figure 2B.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        344,
+        889
+      ]
+    },
+    {
+      "id": "rcs-tb",
+      "label": "Roy Creek South TB",
+      "lat": 30.30654,
+      "lon": -98.151206,
+      "type": "Spring / surface water",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "Named marker in thesis Figure 2B; precise spring/surface-water classification unresolved.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        334,
+        998
+      ]
+    },
+    {
+      "id": "rcs-top",
+      "label": "Roy Creek South Top",
+      "lat": 30.305162,
+      "lon": -98.148326,
+      "type": "Spring / surface water",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "Named marker in thesis Figure 2B; precise spring/surface-water classification unresolved.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        371,
+        1015
+      ]
+    },
+    {
+      "id": "rcs-lds",
+      "label": "Roy Creek South LDS",
+      "lat": 30.304838,
+      "lon": -98.147781,
+      "type": "Spring",
+      "coordinateBasis": "Approximate marker digitized from thesis Figure 2B, affine fit to five Hunt (2023) Table 2 wells",
+      "coordinateConfidence": "approximate",
+      "uncertaintyMeters": 150,
+      "description": "Named marker in thesis Figure 2B; described as upstream spring in thesis text.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B; control coordinates Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        378,
+        1019
+      ]
+    },
+    {
+      "id": "deadmans-creek",
+      "label": "Deadmans Creek",
+      "lat": 30.316677,
+      "lon": -98.172687,
+      "type": "Surface water / spring",
+      "coordinateBasis": "Approximate Deadmans Hole group centroid in thesis Figure 2B; individual sublocation unresolved",
+      "coordinateConfidence": "group location only",
+      "uncertaintyMeters": 300,
+      "description": "The three chemistry labels share the displayed group location; the map does not establish which brown marker corresponds to each sublocation.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        58,
+        873
+      ]
+    },
+    {
+      "id": "deadmans-hole-pool",
+      "label": "Deadmans Hole pool",
+      "lat": 30.316677,
+      "lon": -98.172687,
+      "type": "Surface water / spring",
+      "coordinateBasis": "Approximate Deadmans Hole group centroid in thesis Figure 2B; individual sublocation unresolved",
+      "coordinateConfidence": "group location only",
+      "uncertaintyMeters": 300,
+      "description": "The three chemistry labels share the displayed group location; the map does not establish which brown marker corresponds to each sublocation.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        58,
+        873
+      ]
+    },
+    {
+      "id": "deadmans-hole-upper",
+      "label": "Deadmans Hole upper",
+      "lat": 30.316677,
+      "lon": -98.172687,
+      "type": "Surface water / spring",
+      "coordinateBasis": "Approximate Deadmans Hole group centroid in thesis Figure 2B; individual sublocation unresolved",
+      "coordinateConfidence": "group location only",
+      "uncertaintyMeters": 300,
+      "description": "The three chemistry labels share the displayed group location; the map does not establish which brown marker corresponds to each sublocation.",
+      "source": "Vivian thesis draft3 JB_DR, Figure 2B",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+      "pixel": [
+        58,
+        873
+      ]
+    },
+    {
+      "id": "farm-well",
+      "label": "Mirasol Farm Well (5747607)",
+      "lat": 30.331362,
+      "lon": -98.138787,
+      "type": "Well",
+      "aquifer": "Cow Creek",
+      "coordinateBasis": "Published decimal-degree coordinates, Hunt (2023), Table 2, printed pp.85\u201387; exact identifier match",
+      "coordinateConfidence": "published coordinates",
+      "uncertaintyMeters": null,
+      "description": "Coordinate accuracy was not specified in the source table; decimal precision is not survey accuracy.",
+      "source": "Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT"
+    },
+    {
+      "id": "well-5747313",
+      "label": "Johanson Monitor Well 1 (5747313)",
+      "lat": 30.337408,
+      "lon": -98.132265,
+      "type": "Well",
+      "aquifer": "Middle Trinity",
+      "coordinateBasis": "Published decimal-degree coordinates, Hunt (2023), Table 2, printed pp.85\u201387; exact identifier match",
+      "coordinateConfidence": "published coordinates",
+      "uncertaintyMeters": null,
+      "description": "Coordinate accuracy was not specified in the source table; decimal precision is not survey accuracy.",
+      "source": "Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT"
+    },
+    {
+      "id": "well-5747314",
+      "label": "Johanson 2 (5747314)",
+      "lat": 30.334475,
+      "lon": -98.132572,
+      "type": "Well",
+      "aquifer": "Middle Trinity",
+      "coordinateBasis": "Published decimal-degree coordinates, Hunt (2023), Table 2, printed pp.85\u201387; exact identifier match",
+      "coordinateConfidence": "published coordinates",
+      "uncertaintyMeters": null,
+      "description": "Coordinate accuracy was not specified in the source table; decimal precision is not survey accuracy.",
+      "source": "Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT"
+    },
+    {
+      "id": "well-5747316",
+      "label": "Buddy RV (5747316)",
+      "lat": 30.334283,
+      "lon": -98.130992,
+      "type": "Well",
+      "aquifer": "Cow Creek",
+      "coordinateBasis": "Published decimal-degree coordinates, Hunt (2023), Table 2, printed pp.85\u201387; exact identifier match",
+      "coordinateConfidence": "published coordinates",
+      "uncertaintyMeters": null,
+      "description": "Coordinate accuracy was not specified in the source table; decimal precision is not survey accuracy.",
+      "source": "Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT"
+    },
+    {
+      "id": "well-5747602",
+      "label": "Hegemier (5747602)",
+      "lat": 30.306662,
+      "lon": -98.127214,
+      "type": "Well",
+      "aquifer": "Middle Trinity",
+      "coordinateBasis": "Published decimal-degree coordinates, Hunt (2023), Table 2, printed pp.85\u201387; exact identifier match",
+      "coordinateConfidence": "published coordinates",
+      "uncertaintyMeters": null,
+      "description": "Coordinate accuracy was not specified in the source table; decimal precision is not survey accuracy.",
+      "source": "Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT"
+    },
+    {
+      "id": "well-5748505",
+      "label": "Murphy TWDB (5748505)",
+      "lat": 30.296467,
+      "lon": -98.072067,
+      "type": "Well",
+      "aquifer": "Lower Glen Rose",
+      "coordinateBasis": "Published decimal-degree coordinates, Hunt (2023), Table 2, printed pp.85\u201387; exact identifier match",
+      "coordinateConfidence": "published coordinates",
+      "uncertaintyMeters": null,
+      "description": "Coordinate accuracy was not specified in the source table; decimal precision is not survey accuracy.",
+      "source": "Hunt (2023), Table 2",
+      "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT"
+    }
+  ],
+  "divide": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "label": "Approximate Middle Trinity groundwater divide",
+          "source": "Thesis Figure 2A, attributed there to Hunt (2023b); digitized approximation, not original divide GIS",
+          "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+          "uncertaintyMeters": 300,
+          "uncertaintyNote": "300 m is a conservative display tolerance chosen for this digitization, not a measured confidence interval. The source divide is itself approximate and may move with groundwater conditions.",
+          "method": "Manual line tracing; Figure 2A affine registration through Figure 2B to five Table 2 well coordinates."
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -98.084129,
+              30.380384
+            ],
+            [
+              -98.080333,
+              30.370904
+            ],
+            [
+              -98.076996,
+              30.359434
+            ],
+            [
+              -98.078617,
+              30.353467
+            ],
+            [
+              -98.081691,
+              30.34676
+            ],
+            [
+              -98.083818,
+              30.34204
+            ],
+            [
+              -98.087638,
+              30.336332
+            ],
+            [
+              -98.091972,
+              30.33237
+            ],
+            [
+              -98.09849,
+              30.327672
+            ],
+            [
+              -98.105026,
+              30.324219
+            ],
+            [
+              -98.113019,
+              30.320276
+            ],
+            [
+              -98.120524,
+              30.31633
+            ],
+            [
+              -98.126566,
+              30.312376
+            ],
+            [
+              -98.131118,
+              30.306672
+            ],
+            [
+              -98.135433,
+              30.301465
+            ],
+            [
+              -98.13949,
+              30.295261
+            ],
+            [
+              -98.143311,
+              30.289554
+            ],
+            [
+              -98.148093,
+              30.282855
+            ],
+            [
+              -98.153843,
+              30.275664
+            ],
+            [
+              -98.159841,
+              30.268722
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "geology": {
+    "type": "geojson",
+    "url": "data/geology.geojson",
+    "label": "Bedrock geology \u00b7 Hunt 2023",
+    "attribution": "Hunt (2023), UT Austin Bureau of Economic Geology; Texas Data Repository (CC0)",
+    "sourceUrl": "https://doi.org/10.18738/T8/SF0BXT",
+    "description": "Original published bedrock GIS polygons; 3 m simplification for browser display. Mapped contacts describe surface bedrock, not necessarily a well\u2019s screened aquifer. No extrapolation beyond source coverage.",
+    "geometryRepairNote": "Two published source polygons had self intersecting rings; standard make_valid repair was applied before simplification.",
+    "featureCount": 161,
+    "legend": [
+      {
+        "unit": "Ked",
+        "label": "Edwards Limestone",
+        "color": "#c7c8b7"
+      },
+      {
+        "unit": "Kwal",
+        "label": "Walnut Clay",
+        "color": "#d7d76c"
+      },
+      {
+        "unit": "Kgrud",
+        "label": "Glen Rose undivided",
+        "color": "#cfebdf"
+      },
+      {
+        "unit": "Kgru",
+        "label": "Upper Glen Rose Limestone",
+        "color": "#b1d6b0"
+      },
+      {
+        "unit": "Kgrl",
+        "label": "Lower Glen Rose Limestone",
+        "color": "#93bdb0"
+      },
+      {
+        "unit": "Khe",
+        "label": "Hensel Sandstone",
+        "color": "#f4e8d5"
+      },
+      {
+        "unit": "Kcc",
+        "label": "Cow Creek Limestone",
+        "color": "#c7d8dc"
+      },
+      {
+        "unit": "Kha",
+        "label": "Hammett Shale",
+        "color": "#b4b4b4"
+      },
+      {
+        "unit": "Ksy",
+        "label": "Sycamore Sandstone",
+        "color": "#f5caa0"
+      },
+      {
+        "unit": "Unknown",
+        "label": "Unclassified polygon",
+        "color": "#dedede"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "id": "hunt2023",
+      "title": "Hunt (2023) Hydrogeology of Hamilton Pool and Reimers Ranch, Phase 2",
+      "url": "https://doi.org/10.18738/T8/SF0BXT",
+      "license": "CC0 1.0 (Texas Data Repository v7.1 metadata, accessed 2026-11-13)",
+      "usedFor": "Published Table 2 well coordinates and original bedrock GIS layer Geology_bedrock_units_2023 from Geology_v3_2023.tar (file296411)."
+    },
+    {
+      "id": "thesis",
+      "title": "Vivian thesis draft3 JB_DR, Figure 2",
+      "url": null,
+      "usedFor": "Named local site marker locations and approximate groundwater divide traced from the user supplied map; not the instructions/comments in the draft."
+    }
+  ]
+}
