@@ -9,3 +9,6 @@ data/run05-recovery.json
 
 data/chemistry-laboratory-working.json
 laboratory-data-audit.local.md
+
+reconstruction/
+data/image*.emf

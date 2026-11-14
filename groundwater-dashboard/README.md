@@ -2,24 +2,24 @@
 
 Live page: https://drempe.github.io/groundwater-dashboard/.
 
-## Publication basis
+## Reconstruction from the raw files
 
-The dashboard is limited to results reported in the thesis and traceable to the final numerical table used for its figures. The separate laboratory working database's automated `USE`, `REVIEW` and `EXCLUDE_PENDING_REVIEW` labels do not establish thesis approval.
+The thesis methods and original laboratory files can be used to reconstruct a dataset. A finished final spreadsheet would help validate that reconstruction, but is not required to begin it. The working reconstruction selects an analytical channel for each element and run, traces source cells, resolves documented per-ion dilution choices, calculates field-blank fractions and corrections, and checks detection limits against the thesis's Table S2.
 
-The supplied Word draft contains figure images and methodological descriptions, but no embedded sample-level result table. The final numerical reporting table has not yet been identified. Until it is supplied, the public dataset contains **zero concentrations** and downloads are disabled. The map retains 25 geographic site labels, published geology, and the approximate groundwater divide. Those markers do not imply that final chemistry values are loaded.
+An initial major-cation reconstruction is retained locally with complete source and decision lineage. It is a working product, not a claim of exact recovery of the author's final dataset. Documented source disagreements remain visible rather than being forced to match the thesis.
 
-## Intended data interface
+The previous separate database's automated USE/REVIEW/10x blank rules do not determine thesis-method eligibility.
 
-One element appears once in the selector. Instrument isotope, gas mode and dilution choices belong in measurement provenance. Final concentrations must preserve the thesis's selected analyses, blank corrections, exclusions and qualified values. A result cannot become eligible merely because a working database gives it a `USE` flag.
+## What remains before numerical publication
 
-The thesis describes cation blank corrections where the blank contributes 5–20% of a concentration and non-reporting above 20%, as well as selecting reanalysis dilution separately for affected ions. These descriptions do not substitute for the final reported numerical values.
+The thesis uses only samples with absolute charge-balance error at or below 10%, and averages replicate pairs only when both satisfy that criterion. This requires matched sulfate, bicarbonate, chloride and nitrate results in addition to Ca, Mg, Na, K and Sr. Complete matched anion/alkalinity inputs have not been identified in the supplied cation folder. Source ambiguities and several method details also remain under review.
 
-`data/chemistry.json` is the publication dataset. It carries `publicationBasis: thesis-reported-results-only`, a publication status, and only `THESIS_REPORTED` result rows. The browser rejects other publication bases and filters out other result dispositions. The current status is `awaiting-final-thesis-data`.
+The public dataset therefore still contains zero concentrations and downloads remain disabled. Locations, geology and the approximate groundwater divide are retained as geographic context. The public notice describes the reconstruction status; it does not say that a finished final table is a prerequisite.
 
-## Working files
+## Display and source records
 
-Original thesis and laboratory files remain in their original locations and are read only. Earlier laboratory extraction work is retained locally as a separate working copy, excluded from the public dataset. `scripts/build_data.py` now writes only `data/chemistry-laboratory-working.json`; it cannot overwrite the publication dataset. Its flags are not final thesis QA/QC decisions.
+One element appears once in the selector. Isotope, gas mode and selected dilution belong in each measurement's provenance. The thesis's reported blank corrections, exclusions, censoring and sample-level charge balance must be accounted for before any reconstructed result is displayed as eligible.
 
-`data-audit.md` describes the publication gate. `geography-notes.md` documents the map sources and positional tolerances. `scripts/validate_publication.py` checks the published dataset's eligibility and empty-state rules.
+The working pipeline, evidence manifests, review and candidate data are kept in the local `reconstruction/` folder, excluded from public deployment. `data/chemistry.json` is the separate, currently empty publication dataset. Working exports cannot automatically become public concentrations.
 
-The map uses Leaflet 1.9.4 under its BSD 2-Clause license. Background maps require an internet connection and retain provider attribution. The geology polygons are stored locally. Publication changes only the `groundwater-dashboard/` directory of the GitHub Pages repository.
+Original thesis and laboratory files remain in their original locations and are read only. The map uses Leaflet 1.9.4 under its BSD 2-Clause license, with provider attribution retained. Local geology polygons and map provenance are documented in `geography-notes.md`. Publication changes only this dashboard directory in the GitHub Pages repository.

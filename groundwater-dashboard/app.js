@@ -49,12 +49,12 @@
   $('filter-context').textContent='Only thesis-reported results are eligible. No unverified concentrations are included in the published dataset.';
   $('unmapped-note').textContent='Locations provide geographic context and do not indicate that final chemistry data have been loaded.';
   $('map-status').textContent=(geography.sites?.length||0)+' mapped thesis locations';
-  $('legend-title').textContent='Thesis results awaiting source table';
+  $('legend-title').textContent='Thesis-method reconstruction in progress';
   $('legend-low').textContent='';$('legend-high').textContent='';
   $('legend-note').textContent='Gray points show mapped locations. No unverified concentrations are displayed.';
-  $('detail-description').textContent=state.siteId==='all'?'Sampling locations and mapped context from the thesis. The final data table used for its figures is needed to populate results.':(sites.get(state.siteId)?.description||'Mapped source location. Final thesis measurements are not yet loaded.');
-  $('chart-note').textContent='Numerical results are withheld until they can be traced to the final thesis reporting table.';
-  $('map-footnote').textContent='Click a location for its map source. Numerical results await the final thesis table.';
+  $('detail-description').textContent=state.siteId==='all'?'Sampling locations and mapped context from the thesis. Numerical results will be populated after reconstruction and the thesis QA/QC checks are complete.':(sites.get(state.siteId)?.description||'Mapped source location. Thesis-method reconstruction is in progress.');
+  $('chart-note').textContent='Numerical results remain withheld while source checks and the thesis charge-balance screen are reconstructed.';
+  $('map-footnote').textContent='Click a location for its map source. Numerical results are being reconstructed and checked.';
   for(const id of ['analyte','statistic','color-scale','date-start','date-end','filtration','quality','download-all','download-site','table-search'])$(id).disabled=true;
  }
 
@@ -72,11 +72,11 @@
   const notes=chemistry.meta?.notes||[];
   const sources=[...(geography.sources||[])];
   $('source-notes').innerHTML='<ul>'+notes.map(n=>'<li>'+esc(n)+'</li>').join('')+'</ul><h4>Map sources</h4><ul>'+sources.map(sourceHtml).join('')+'</ul>';
-  $('build-info').textContent='Publication basis: final results used in the thesis, not the working laboratory database. Source table pending.';
+  $('build-info').textContent='Publication basis: reconstruction from raw analytical files using the thesis methods and comparison with its figures. Numerical publication awaits completion of its final QA/QC criteria.';
   $('geography-method').textContent='The divide is traced approximately from the thesis map with a 300 m display tolerance. Most local sites use a 150 m tolerance; three Deadmans labels share a 300 m group location. Tolerances are not statistical confidence intervals. Published well coordinates have unspecified accuracy.';
  }
  async function init(){try{
-  const responses=await Promise.all([fetch('data/chemistry.json?v=thesis-only-20261113'),fetch('data/geography.json')]);
+  const responses=await Promise.all([fetch('data/chemistry.json?v=thesis-reconstruction-20261114'),fetch('data/geography.json')]);
   if(!responses[0].ok)throw new Error('Thesis publication dataset unavailable.');
   chemistry=await responses[0].json();
   if(chemistry.meta?.publicationBasis!=='thesis-reported-results-only')throw new Error('The laboratory working dataset is not eligible for this publication view.');
